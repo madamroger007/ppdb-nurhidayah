@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ExportLaporanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +23,11 @@ Route::get('/pendaftaran', function () {
 
 Route::post('/submit-pendaftaran', [App\Http\Controllers\PendaftaranController::class, 'store'])
     ->name('pendaftaran.store');
+
+Route::get('/admin/logout', function () {
+    auth()->logout();
+    return redirect('/admin/login');
+})->name('filament.logout');
+
+
+Route::get('/export-laporan/{year}', [ExportLaporanController::class, 'export'])->name('laporan.export');

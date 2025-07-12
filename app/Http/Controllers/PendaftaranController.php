@@ -20,7 +20,7 @@ class PendaftaranController extends Controller
             'jenis_kelamin'      => 'required|string',
             'agama'              => 'required|string|max:50',
             'alamat'             => 'required|string|max:255',
-            'nik'                => 'required|string|max:20',
+            'nik'                 => 'required|string|max:20|unique:pendaftar,nik',
             'scan_akta_kelahiran' => 'required|image|max:2048',
             'scan_kk'             => 'required|image|max:2048',
             'foto_latar'         => 'required|image|max:2048',
@@ -29,7 +29,7 @@ class PendaftaranController extends Controller
             'nama_ibu'           => 'required|string|max:255',
             'pekerjaan_ibu'      => 'required|string|max:100',
             'no_hp'              => 'required|string|max:20',
-            'email'              => 'nullable|email|max:255',
+            'email'               => 'nullable|email|max:255|unique:pendaftar,email',
         ]);
 
         // === Simpan dan cek duplikat akta ===
@@ -86,7 +86,9 @@ class PendaftaranController extends Controller
             'verifikasi_data'     => false,
         ]);
 
-        return redirect()->back()->with('success', 'Pendaftaran berhasil dikirim!');
+
+
+        return response()->json(['message' => 'Pendaftaran berhasil dikirim!'], 200);
     }
 
     /**
