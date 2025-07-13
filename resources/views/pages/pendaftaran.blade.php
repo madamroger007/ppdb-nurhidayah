@@ -20,6 +20,10 @@
             @apply border-green-600 bg-green-50;
         }
     </style>
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- Toastify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 </head>
 
@@ -39,7 +43,11 @@
                         <input type="text" name="tempat_lahir" placeholder="Tempat" class="w-1/2 border-b p-2 focus:outline-none" required />
                         <input type="date" name="tanggal_lahir" class="w-1/2 border-b p-2 focus:outline-none" required />
                     </div>
-                    <input type="text" name="jenis_kelamin" placeholder="Jenis Kelamin" class="w-full border-b p-2 focus:outline-none" required />
+                    <select name="jenis_kelamin" class="w-full border-b p-2 focus:outline-none bg-white" required>
+                        <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
                     <input type="text" name="agama" placeholder="Agama" class="w-full border-b p-2 focus:outline-none" required />
                     <input type="text" name="alamat" placeholder="Alamat Lengkap" class="w-full border-b p-2 focus:outline-none" required />
                     <input type="text" name="nik" placeholder="Nomor Induk Kependudukan" class="w-full border-b p-2 focus:outline-none" required />
@@ -117,8 +125,20 @@
                 const data = await response.json();
 
                 if (response.ok) {
-                    alert(data.message || 'Pendaftaran berhasil!');
+                    Toastify({
+                        text: data.message || "Pendaftaran berhasil!",
+                        duration: 3000,
+                        gravity: "top",
+                        position: "right",
+                        backgroundColor: "#16a34a",
+                        close: true,
+                        style: {
+                            borderRadius: "6px",
+                        }
+                    }).showToast();
+
                     form.reset();
+
 
                     // Reset preview gambar juga
                     document.querySelectorAll('.preview').forEach(p => {
@@ -128,17 +148,49 @@
                     });
                 } else {
                     if (data.errors) {
-                        const messages = Object.entries(data.errors)
-                            .map(([key, val]) => `${key}: ${val.join(', ')}`)
-                            .join('\n');
-                        alert(messages);
+                        const msg = data.errors ?
+                            Object.entries(data.errors).map(([key, val]) => `${key}: ${val.join(', ')}`).join('\n') :
+                            (data.message || 'Terjadi kesalahan.');
+
+                        Toastify({
+                            text: msg,
+                            duration: 3000,
+                            gravity: "top",
+                            position: "right",
+                            backgroundColor: "#dc2626",
+                            close: true,
+                            style: {
+                                borderRadius: "6px",
+                                whiteSpace: "pre-line", // agar \n terlihat sebagai baris baru
+                            }
+                        }).showToast();
                     } else {
-                        alert(data.message || 'Terjadi kesalahan.');
+                        Toastify({
+                            text: data.message || "Terjadi kesalahan.",
+                            duration: 3000,
+                            gravity: "top",
+                            position: "right",
+                            backgroundColor: "#dc2626",
+                            close: true,
+                            style: {
+                                borderRadius: "6px",
+                            }
+                        }).showToast();
                     }
                 }
             } catch (error) {
                 console.error(error);
-                alert('Gagal mengirim data. Cek koneksi atau server.');
+                Toastify({
+                    text: "Gagal mengirim data. Cek koneksi atau server.",
+                    duration: 3000,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#dc2626",
+                    close: true,
+                    style: {
+                        borderRadius: "6px",
+                    }
+                }).showToast();
             }
         });
     </script>

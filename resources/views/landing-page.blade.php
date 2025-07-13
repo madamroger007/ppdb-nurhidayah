@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PPDB - RA Nurhidayah Bojongsoang</title>
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script
         src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"
         type="module"></script>
 
-     <style type="text/tailwindcss">
+    <style type="text/tailwindcss">
         @theme {
         --color-clifford: #da373d;
       }
@@ -26,23 +26,23 @@
 
     <!-- Navbar -->
     <!-- Navbar -->
-<header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <!-- Logo -->
-        <a href="#beranda" class="text-2xl font-bold text-green-700 tracking-wide hover:opacity-90 transition duration-300">
-            RA Nurhidayah
-        </a>
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#beranda" class="text-2xl font-bold text-green-700 tracking-wide hover:opacity-90 transition duration-300">
+                RA Nurhidayah
+            </a>
 
-        <!-- Menu Desktop -->
-        <nav class="hidden md:flex space-x-6 items-center font-medium text-gray-700">
-            <a href="#beranda" class="hover:text-green-600 transition duration-300">Beranda</a>
-            <a href="#tentang" class="hover:text-green-600 transition duration-300">Tentang Kami</a>
-            <a href="#fasilitas" class="hover:text-green-600 transition duration-300">Fasilitas</a>
-            <a href="#testimoni" class="hover:text-green-600 transition duration-300">Testimoni</a>
-            <a href="/pendaftaran" class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 shadow-md transition duration-300">Mulai Pendaftaran</a>
-        </nav>
-    </div>
-</header>
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex space-x-6 items-center font-medium text-gray-700">
+                <a href="#beranda" class="hover:text-green-600 transition duration-300">Beranda</a>
+                <a href="#tentang" class="hover:text-green-600 transition duration-300">Tentang Kami</a>
+                <a href="#fasilitas" class="hover:text-green-600 transition duration-300">Fasilitas</a>
+                <a href="#testimoni" class="hover:text-green-600 transition duration-300">Testimoni</a>
+                <a href="/pendaftaran" class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 shadow-md transition duration-300">Mulai Pendaftaran</a>
+            </nav>
+        </div>
+    </header>
 
 
     <!-- Hero Section -->
@@ -69,7 +69,7 @@
     </section>
 
 
-    <!-- Tentang -->
+    <!-- Tentang Kami-->
     <section id="tentang" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div data-aos="fade-right">
@@ -83,6 +83,71 @@
             </div>
         </div>
     </section>
+
+    <!-- Visi dan Misi -->
+    <section id="visi-misi" class="py-20 bg-green-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Visi & Misi</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Membangun generasi yang cerdas, berakhlak mulia, dan mencintai ilmu serta agama.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div data-aos="fade-up" class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-green-700 mb-3">Visi</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Menjadi lembaga pendidikan anak usia dini yang unggul dalam pembentukan karakter islami, kreatif, dan berwawasan.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-green-700 mb-3">Misi</h3>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Menanamkan akidah dan akhlak islami sejak dini.</li>
+                        <li>Mengembangkan potensi anak melalui pembelajaran aktif dan menyenangkan.</li>
+                        <li>Mengintegrasikan nilai-nilai keislaman dalam kegiatan harian.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kurikulum Pembelajaran -->
+    <!-- Kurikulum Pembelajaran -->
+    <section id="kurikulum" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Apa Saja yang Dipelajari?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Materi pembelajaran di RA Nurhidayah dirancang untuk menanamkan nilai-nilai Islam sejak dini, serta mengembangkan potensi anak secara menyeluruh.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div data-aos="fade-up" class="bg-green-50 p-6 rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="text-lg font-semibold text-green-700 mb-2">Akidah & Tauhid</h3>
+                    <p class="text-sm text-gray-700">Mengenalkan anak kepada Allah, rukun iman, dan keyakinan yang benar sejak usia dini.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-green-50 p-6 rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="text-lg font-semibold text-green-700 mb-2">Fiqih Dasar</h3>
+                    <p class="text-sm text-gray-700">Pembelajaran praktik ibadah seperti wudhu, shalat, puasa, dan tata cara bersuci sesuai usianya.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-green-50 p-6 rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="text-lg font-semibold text-green-700 mb-2">BTQ (Baca Tulis Qur’an)</h3>
+                    <p class="text-sm text-gray-700">Anak diajarkan membaca huruf hijaiyah, tajwid dasar, dan menulis huruf Arab dengan metode menyenangkan.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-green-50 p-6 rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="text-lg font-semibold text-green-700 mb-2">Doa-Doa Harian</h3>
+                    <p class="text-sm text-gray-700">Menghafal dan membiasakan doa sehari-hari seperti doa makan, tidur, masuk-keluar rumah, dll.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400" class="bg-green-50 p-6 rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="text-lg font-semibold text-green-700 mb-2">Adab & Akhlak</h3>
+                    <p class="text-sm text-gray-700">Menanamkan sopan santun, menghormati guru, berbagi, dan bersikap baik kepada sesama.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="500" class="bg-green-50 p-6 rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="text-lg font-semibold text-green-700 mb-2">Keterampilan & Seni</h3>
+                    <p class="text-sm text-gray-700">Melatih kreativitas melalui menggambar, mewarnai, menari islami, dan keterampilan motorik halus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Fasilitas -->
     <section id="fasilitas" class="py-20 bg-green-50">
@@ -110,36 +175,36 @@
 
     <!-- Testimoni -->
     <section id="testimoni" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Apa Kata Orang Tua?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-100 p-6 rounded-lg shadow text-center">
-                <!-- Inisial A -->
-                <div class="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center bg-green-600 text-white text-2xl font-bold">
-                    A
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Apa Kata Orang Tua?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-100 p-6 rounded-lg shadow text-center">
+                    <!-- Inisial A -->
+                    <div class="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center bg-green-600 text-white text-2xl font-bold">
+                        A
+                    </div>
+                    <p class="italic text-gray-600">"Anak saya berkembang luar biasa sejak belajar di RA Nurhidayah."</p>
+                    <p class="mt-4 font-semibold text-green-700">Ahmad Zaenuddin</p>
                 </div>
-                <p class="italic text-gray-600">"Anak saya berkembang luar biasa sejak belajar di RA Nurhidayah."</p>
-                <p class="mt-4 font-semibold text-green-700">Ahmad Zaenuddin</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-100 p-6 rounded-lg shadow text-center">
-                <!-- Inisial B -->
-                <div class="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center bg-green-600 text-white text-2xl font-bold">
-                    B
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-100 p-6 rounded-lg shadow text-center">
+                    <!-- Inisial B -->
+                    <div class="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center bg-green-600 text-white text-2xl font-bold">
+                        B
+                    </div>
+                    <p class="italic text-gray-600">"Lingkungannya islami dan guru-gurunya sangat peduli."</p>
+                    <p class="mt-4 font-semibold text-green-700">Bimarni satarwasih</p>
                 </div>
-                <p class="italic text-gray-600">"Lingkungannya islami dan guru-gurunya sangat peduli."</p>
-                <p class="mt-4 font-semibold text-green-700">Bimarni satarwasih</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-100 p-6 rounded-lg shadow text-center">
-                <!-- Inisial C -->
-                <div class="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center bg-green-600 text-white text-2xl font-bold">
-                    C
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-100 p-6 rounded-lg shadow text-center">
+                    <!-- Inisial C -->
+                    <div class="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center bg-green-600 text-white text-2xl font-bold">
+                        C
+                    </div>
+                    <p class="italic text-gray-600">"Saya senang dengan metode pengajaran yang seimbang dunia-akhirat."</p>
+                    <p class="mt-4 font-semibold text-green-700">Celina Putri</p>
                 </div>
-                <p class="italic text-gray-600">"Saya senang dengan metode pengajaran yang seimbang dunia-akhirat."</p>
-                <p class="mt-4 font-semibold text-green-700">Celina Putri</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- Footer -->
