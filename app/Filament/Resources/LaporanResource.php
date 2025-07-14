@@ -102,7 +102,7 @@ class LaporanResource extends Resource
                     ->color('success')
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                //  Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -123,7 +123,7 @@ class LaporanResource extends Resource
         return [
             'index' => Pages\ListLaporans::route('/'),
             'create' => Pages\CreateLaporan::route('/create'),
-            'edit' => Pages\EditLaporan::route('/{record}/edit'),
+            //'edit' => Pages\EditLaporan::route('/{record}/edit'),
         ];
     }
 }
