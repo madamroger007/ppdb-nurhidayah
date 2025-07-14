@@ -117,7 +117,8 @@
                     method: 'POST',
                     body: formData,
                     headers: {
-                        'Accept': 'application/json'
+                        'Accept': 'application/json',
+                        'X-CSRF-TOKEN': token
                         // Jangan tambahkan Content-Type di sini, biarkan FormData mengatur boundary
                     },
                 });
