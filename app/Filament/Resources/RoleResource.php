@@ -181,9 +181,8 @@ class RoleResource extends Resource implements HasShieldPermissions
 
     public static function getNavigationLabel(): string
     {
-        return 'Hak Akses'; // langsung hardcode
+        return __('filament-shield::filament-shield.nav.role.label');
     }
-
 
     public static function getNavigationIcon(): string
     {
