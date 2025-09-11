@@ -37,7 +37,7 @@ class DataPendaftaranResource extends Resource
                 TextInput::make('tempat_lahir')->label('Tempat Lahir Pendaftar')->disabled(),
                 TextInput::make('email')->label('Email Pendaftar')->disabled(),
                 TextInput::make('no_hp')->label('No. Telepon Pendaftar')->disabled(),
-                TextInput::make('tgl_lahir')->label('Tanggal Lahir Pendaftar')->disabled(),
+                TextInput::make('tgl_lahir')->label('Tanggal Lahir Pendaftar')->disabled()->formatStateUsing(fn($state) => $state ? date('Y-m-d H:i:s', strtotime($state)) : null),
                 TextInput::make('jenis_kelamin')->label('Jenis Kelamin Pendaftar')->disabled(),
                 TextInput::make('agama')->label('Agama Pendaftar')->disabled(),
                 TextInput::make('alamat')->label('Alamat Pendaftar')->disabled(),
